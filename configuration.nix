@@ -131,6 +131,7 @@
     alacritty
     # editor
     neovim 
+    vscode
     # web browser
     firefox
     # IDE
