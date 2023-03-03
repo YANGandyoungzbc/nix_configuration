@@ -1,7 +1,7 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-# First Install
+## First Install
 ## use --option substituers 科大源
 
 { config, pkgs, ... }:
@@ -113,38 +113,42 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # basic
-    libgccjit
-    wget
-    git
-    lazygit
-    python311
-    python311Packages.pip
-    nodejs-19_x
-    neofetch
-    btop
-    bash-completion
-    nix-bash-completions
-    tldr
+    libgccjit				# C
+    rustup				# rust
+    wget				# wget
+    git					# git
+    lazygit				# git gui
+    python311				# python
+    python311Packages.pip		# pip
+    nodejs-19_x				# nodejs
+    neofetch				# neofetch
+    btop				# btop
+    bash-completion			# bash-completions
+    nix-bash-completions		# bash-completions for nix
+    tldr				# alternative to man
     # terminal & shell
-    starship
-    fish
-    alacritty
+    starship				# starship 
+    fish				# fish shell
+    alacritty				# terminal : alacritty
+    flameshot				# screen shot
     # editor
-    neovim 
-    vscode
+    neovim 				# nvim
+    vscode				# vscode
     # web browser
-    firefox
+    firefox				# firefox
     # IDE
-    jetbrains.pycharm-community
+    jetbrains.pycharm-community		# python IDE
     # DBmanager
-    dbeaver
+    dbeaver				# DataBase management
     # KDE plasma software
-    libsForQt5.ark
+    libsForQt5.ark			# KED plasma : ark
     # video
-    mpv
+    mpv					# mpv
     # office
-    wpsoffice-cn
+    wpsoffice-cn			# wps
   ];
+
+  # 允许非免费包
   nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -169,7 +173,7 @@
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  system.copySystemConfiguration = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
