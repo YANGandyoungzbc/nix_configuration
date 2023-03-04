@@ -93,8 +93,8 @@
   i18n.inputMethod = {
       enabled = "fcitx5";
       fcitx5.addons = with pkgs; [
-	  fcitx5-gtk
-	  fcitx5-chinese-addons
+	      fcitx5-gtk
+	      fcitx5-chinese-addons
       ];
   };
 
@@ -113,42 +113,43 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # basic
-    libgccjit				# C
-    rustup				# rust
-    wget				# wget
-    git					# git
-    lazygit				# git gui
-    python311				# python
-    python311Packages.pip		# pip
-    nodejs-19_x				# nodejs
-    neofetch				# neofetch
-    btop				# btop
-    bash-completion			# bash-completions
-    nix-bash-completions		# bash-completions for nix
-    tldr				# alternative to man
+    libgccjit				                                # C
+    rustup				                                  # rust
+    wget				                                    # wget
+    git					                                    # git
+    lazygit				                                  # git gui
+    python311				                                # python
+    python311Packages.pip		                        # pip
+    nodejs-19_x				                              # nodejs
+    neofetch				                                # neofetch
+    btop				                                    # btop
+    bash-completion			                            # bash-completions
+    nix-bash-completions		                        # bash-completions for nix
+    tldr				                                    # alternative to man
     # terminal & shell
-    starship				# starship 
-    fish				# fish shell
-    alacritty				# terminal : alacritty
-    flameshot				# screen shot
+    starship				                                # starship 
+    fish				                                    # fish shell
+    alacritty				                                # terminal : alacritty
+    flameshot				                                # screen shot
     # editor
-    neovim 				# nvim
-    vscode				# vscode
+    neovim 				                                  # nvim
+    vscode				                                  # vscode
+    micro                                           # micro
     # web browser
-    firefox				# firefox
+    firefox				                                  # firefox
     # IDE
-    jetbrains.pycharm-community		# python IDE
+    jetbrains.pycharm-community		                  # python IDE
     # DBmanager
-    dbeaver				# DataBase management
+    dbeaver				                                  # DataBase management
     # KDE plasma software
-    libsForQt5.ark			# KED plasma : ark
+    libsForQt5.ark			                            # KED plasma : ark
     # video
-    mpv					# mpv
+    mpv					                                    # mpv
     # office
-    wpsoffice-cn			# wps
+    wpsoffice-cn			                              # wps
   ];
 
-  # 允许非免费包
+  # 允许非自由包
   nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
