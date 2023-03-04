@@ -130,7 +130,9 @@
     starship				                                # starship 
     fish				                                    # fish shell
     alacritty				                                # terminal : alacritty
-    flameshot				                                # screen shot
+    zellij                                          # Terminal Multiplexer written in rust
+    # screen shot
+    flameshot				                                
     # editor
     neovim 				                                  # nvim
     vscode				                                  # vscode
