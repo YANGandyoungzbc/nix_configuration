@@ -149,6 +149,8 @@
     mpv					                                    # mpv
     # office
     wpsoffice-cn			                              # wps
+    # file browser
+    nnn                                             # terminal file manager
   ];
 
   # 允许非自由包
