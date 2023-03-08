@@ -130,6 +130,7 @@
     starship				                                # starship 
     fish				                                    # fish shell
     alacritty				                                # terminal : alacritty
+    kitty                                           # terminal : kitty
     zellij                                          # Terminal Multiplexer written in rust
     # screen shot
     flameshot				                                
