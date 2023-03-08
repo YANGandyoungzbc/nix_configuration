@@ -141,6 +141,7 @@
     firefox				                                  # firefox
     # IDE
     jetbrains.pycharm-community		                  # python IDE
+    jetbrains.idea-community                        # IDEA
     # DBmanager
     dbeaver				                                  # DataBase management
     # KDE plasma software
