@@ -62,7 +62,7 @@
   # font
   fonts.fonts = with pkgs; [
   	sarasa-gothic
-	(nerdfonts.override { fonts = [ "FiraCode" ];})
+	(nerdfonts.override { fonts = [ "FiraCode" "Iosevka" ];})
   ];
 
   # sudoers extraConfig
