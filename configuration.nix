@@ -99,22 +99,22 @@
       ];
   };
 
+  users.mutableUsers = false;  # 只允许通过配置文件管理用户
+  security.sudo.wheelNeedsPassword = false;  # wheel 组成员使用sudo 时无需密码
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yang= {
     isNormalUser = true;
-    hashedPassword = "$6$4m14pX86dYF5Up1S$77HQuogLsWzdt5VS/Pa36gbQOUZBQQCstawciH7F8IgUJblY0Q/XonPqRJq8QT8/o8l6XxiMaalb1bFmrT.7s0"
+    hashedPassword = "$6$4m14pX86dYF5Up1S$77HQuogLsWzdt5VS/Pa36gbQOUZBQQCstawciH7F8IgUJblY0Q/XonPqRJq8QT8/o8l6XxiMaalb1bFmrT.7s0";
     extraGroups = [ 
-    "wheel" 
-    "networkmanager"
+      "wheel" 
+      "networkmanager" 
     ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       #firefox
       #thunderbird
     ];
   };
-
-  users.mutableUsers = false;  # 只允许通过配置文件管理用户
-  security.sudo.wheelNeedsPassword = false;  # wheel 组成员使用sudo 时无需密码
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
