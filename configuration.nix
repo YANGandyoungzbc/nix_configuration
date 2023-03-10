@@ -67,7 +67,8 @@
 
   # sudoers extraConfig
   # sudo 免密
-  security.sudo.extraConfig = "yang ALL=(ALL:ALL) NOPASSWD: ALL"; 
+  # 已在user管理配置下完成
+  # security.sudo.extraConfig = "yang ALL=(ALL:ALL) NOPASSWD: ALL"; 
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -101,13 +102,19 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yang= {
     isNormalUser = true;
-    password = "jkl;";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    hashedPassword = "$6$4m14pX86dYF5Up1S$77HQuogLsWzdt5VS/Pa36gbQOUZBQQCstawciH7F8IgUJblY0Q/XonPqRJq8QT8/o8l6XxiMaalb1bFmrT.7s0"
+    extraGroups = [ 
+    "wheel" 
+    "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       #firefox
       #thunderbird
     ];
   };
+
+  users.mutableUsers = false;  # 只允许通过配置文件管理用户
+  security.sudo.wheelNeedsPassword = false;  # wheel 组成员使用sudo 时无需密码
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -153,8 +160,6 @@
     wpsoffice-cn			                              # wps
     # file browser
     nnn                                             # terminal file manager
-    # cloud
-    terraform-providers.baiducloud                  # 百度网盘
   ];
 
   # 允许非自由包
