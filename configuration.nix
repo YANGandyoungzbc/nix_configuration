@@ -153,6 +153,8 @@
     wpsoffice-cn			                              # wps
     # file browser
     nnn                                             # terminal file manager
+    # cloud
+    terraform-providers.baiducloud                  # 百度网盘
   ];
 
   # 允许非自由包
