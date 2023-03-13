@@ -160,6 +160,9 @@
     wpsoffice-cn			                              # wps
     # file browser
     nnn                                             # terminal file manager
+    # proxy
+    v2raya                                          # v2raya
+    clash-verge                                     # clash-verge
   ];
 
   # 允许非自由包
