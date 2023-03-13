@@ -86,8 +86,8 @@
   # garbage collection
   nix.gc= {
   	automatic = true;
-	dates = "weekly";
-	options = "--delete-older-than 30d";
+	  dates = "weekly";
+	  options = "--delete-older-than 30d";
   };
 
   # input method
@@ -116,53 +116,57 @@
     ];
   };
 
+  # service enable
+  services.v2raya.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # basic
-    libgccjit				                                # C
+    libgccjit				                              # C
     rustup				                                  # rust
-    wget				                                    # wget
-    git					                                    # git
+    wget				                                  # wget
+    git					                                  # git
     lazygit				                                  # git gui
-    python311				                                # python
-    python311Packages.pip		                        # pip
+    python311				                              # python
+    python311Packages.pip		                          # pip
     nodejs-19_x				                              # nodejs
-    neofetch				                                # neofetch
-    btop				                                    # btop
-    bash-completion			                            # bash-completions
-    nix-bash-completions		                        # bash-completions for nix
-    tldr				                                    # alternative to man
+    neofetch				                              # neofetch
+    btop				                                  # btop
+    bash-completion			                              # bash-completions
+    nix-bash-completions		                          # bash-completions for nix
+    tldr				                                  # alternative to man
     # terminal & shell
-    starship				                                # starship 
-    fish				                                    # fish shell
-    alacritty				                                # terminal : alacritty
-    kitty                                           # terminal : kitty
-    zellij                                          # Terminal Multiplexer written in rust
+    starship				                              # starship 
+    fish				                                  # fish shell
+    alacritty				                              # terminal : alacritty
+    kitty                                                 # terminal : kitty
+    zellij                                                # Terminal Multiplexer written in rust
     # screen shot
     flameshot				                                
     # editor
     neovim 				                                  # nvim
     vscode				                                  # vscode
-    micro                                           # micro
+    micro                                                 # micro
     # web browser
     firefox				                                  # firefox
     # IDE
-    jetbrains.pycharm-community		                  # python IDE
-    jetbrains.idea-community                        # IDEA
+    jetbrains.pycharm-community		                      # python IDE
+    jetbrains.idea-community                              # IDEA
     # DBmanager
     dbeaver				                                  # DataBase management
     # KDE plasma software
-    libsForQt5.ark			                            # KED plasma : ark
+    libsForQt5.ark			                              # KED plasma : ark
     # video
-    mpv					                                    # mpv
+    mpv					                                  # mpv
     # office
     wpsoffice-cn			                              # wps
     # file browser
-    nnn                                             # terminal file manager
+    nnn                                                   # terminal file manager
     # proxy
-    v2raya                                          # v2raya
-    clash-verge                                     # clash-verge
+    v2ray                                                 # core
+    v2raya                                                # v2raya
+    # clash-verge                                           # clash-verge 很卡
   ];
 
   # 允许非自由包
