@@ -60,12 +60,12 @@
   # };
 
   # using keyd to remap
-  #services.keyd.enable = true;
-  #services.keyd.settings = {
-   # main = {
-    #  capslock = "overload(control, esc)";
-   # };
-  #};
+  services.keyd.enable = true;
+  services.keyd.settings = {
+    main = {
+      capslock = "overload(control, esc)";
+    };
+  };
   
 
   # font
