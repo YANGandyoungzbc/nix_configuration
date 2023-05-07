@@ -31,8 +31,8 @@
   time.timeZone = "Asia/Shanghai";
 
   # Configure network proxy if necessary
-  networking.proxy.default = "http://192.168.5.1:7890/";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # networking.proxy.default = "http://192.168.5.1:7890/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
@@ -167,6 +167,7 @@
     dbeaver				                                  # DataBase management
     # KDE plasma software
     libsForQt5.ark			                              # KED plasma : ark
+    libsForQt5.filelight
     # video
     mpv					                                  # mpv
     # office
@@ -177,6 +178,8 @@
     v2ray                                                 # core
     v2raya                                                # v2raya
     # clash-verge                                           # clash-verge 很卡
+    # nix
+    nix-du
   ];
 
   # 允许非自由包
