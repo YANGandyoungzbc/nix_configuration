@@ -59,6 +59,15 @@
   #   "caps:escape" # map caps to escape.
   # };
 
+  # using keyd to remap
+  #services.keyd.enable = true;
+  #services.keyd.settings = {
+   # main = {
+    #  capslock = "overload(control, esc)";
+   # };
+  #};
+  
+
   # font
   fonts.fonts = with pkgs; [
   	sarasa-gothic
@@ -136,6 +145,7 @@
     bash-completion			                              # bash-completions
     nix-bash-completions		                          # bash-completions for nix
     tldr				                                  # alternative to man
+    github-desktop                                # github desktop
     # terminal & shell
     starship				                              # starship 
     fish				                                  # fish shell
